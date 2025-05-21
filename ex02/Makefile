@@ -18,6 +18,12 @@ $(NAME): $(OBJS)
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# diff:
+# 	@sed 's/^\[[^]]*\] //' log.log > log_clean.log
+# 	@sed 's/^\[[^]]*\] //' out.log > out_clean.log
+# 	@diff log_clean.log out_clean.log
+# 	@rm -f log_clean.log out_clean.log
+
 clean:
 	rm -rf $(OBJS)
 
@@ -26,4 +32,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean diff fclean re
