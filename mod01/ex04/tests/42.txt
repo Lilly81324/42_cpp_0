@@ -1,0 +1,82 @@
+Wikipedia Die freie Enzyklopädie
+
+42 Wolfsburg
+Logo
+Logo
+Schulform 	Privatschule
+Gründung 	2020
+Ort 	Wolfsburg, Deutschland
+Land 	Niedersachsen
+Staat 	Deutschland
+Koordinaten 	♁52° 25′ 36″ N, 10° 47′ 22″ OKoordinaten: 52° 25′ 36″ N, 10° 47′ 22″ O | | OSM
+Träger 	42 Wolfsburg e. V.
+Schüler 	600
+Leitung 	Ralf Brunken
+Website 	www.42wolfsburg.de
+Markthalle, in der heute die Schule ansässig ist (2019)
+
+42 Wolfsburg ist eine private, gemeinnützige und gebührenfreie Schule in Wolfsburg in Niedersachsen, an der IT-Fachkräfte ausgebildet werden. Träger der Schule ist der Verein 42 Wolfsburg. Es handelt sich zusammen mit 42 Heilbronn um die ersten beiden deutschen Standorte der 2013 in Paris gegründeten Schule 42. Seit Ende 2021 gibt es auch einen Standort in Berlin.[1]
+Beschreibung
+
+Die Ausbildung erfolgt nach dem Vorbild und Konzept der Pariser Schule 42.[2] Die Benennung mit der Zahl 42 ist ein Zitat aus dem Roman Per Anhalter durch die Galaxis des britischen Autors Douglas Adams. Weltweit wurden bis 2020 an fast 30 Standorten Schulen nach diesem Konzept eröffnet.[3]
+
+Die Schule 42 Wolfsburg befindet sich in der ehemaligen Markthalle Wolfsburg am Nordkopf der Porschestraße, die ursprünglich als Lebensmittelabteilung des 1960 eröffneten Hertie Waren- und Kaufhauses erbaut worden war. Sie nahm Anfang 2021 den Schulbetrieb auf.[4] Die Präsidenten des Vereins sind Ralph Linde und Andrea Morgan-Schönwetter. Direktor der Schule ist Ralf Brunken.
+Bewerbungsverfahren
+
+An der Schule kann sich jede Person ab 18 Jahren unabhängig ihrer schulischen und beruflichen Vorbildung durch Registrierung auf der Website bewerben. Nach einem bestandenen Online-Test – bei dem vor allem Fähigkeiten im Bereich Logik ermittelt werden – erfolgt eine persönliche Vorstellung. Zum Schluss des Aufnahmeverfahrens nehmen die Bewerber an den sogenannten vierwöchigen „Piscines“ (franz.: Schwimmbecken) teil. Dies ermöglicht einen Einblick in das Lehrprogramm sowie das Programmieren. Nach dem Bestehen ergeht eine Zu- oder Absage zur Aufnahme an der Schule.[5][6][7]
+Unterrichtsgestaltung und Ausbildungsverlauf
+
+Das Ausbildungsmodell besteht aus Peer-to-Peer-Pädagogik, level- und projektbasiertem Lernen sowie Hilfe zur Selbsthilfe. Es gibt keinen einheitlichen Lehrplan für alle Studenten. Es wird eine in Projekten organisierte Unterrichtsform angewendet, um die fachliche und soziale Kompetenzen der Studenten zu fördern. Der Campus der Schule ist 24/7 geöffnet, was den Studenten eine freie Zeiteinteilung ermöglicht. Neben 250 Arbeitsplätzen gibt es auch Aufenthaltsräume und Ruhebereiche.[8]
+
+Die IT-Ausbildung an der Schule dauert zwischen einem und fünf Jahren. Der Abschluss des ersten Ausbildungsjahres und eines Praktikums ermöglicht es Studenten, als Junior-Entwickler eingestellt zu werden. Mit Fortführung des Studiums, der Auswahl von Spezialisierungen und einem zweiten Praktikum, besteht die Möglichkeit, als Softwareingenieur innerhalb der gewählten Spezialisierung zu arbeiten.
+
+Gamification ist ein zentrales Element der Ausbildung. Studenten erhalten für die erfolgreiche Durchführung ihrer Projekte Punkte, die für das Erreichen höherer Level benötigt werden. Mit höherem Level werden weitere Projekte und neue Ausbildungsbereiche freigeschaltet. Mit Level 16 erreicht man das „junior developer level“ und mit dem Bestehen von Level 21 wird das „master level“ erreicht.[9]
+
+Zu Beginn der Ausbildung erfolgt zunächst eine Konzentration auf sorgfältige Befehlszeileninteraktion, elementare C-Programmierung und elementare Algorithmen. Studenten beginnen mit der Sprache C. Im Laufe des Lehrplans kommen weitere Programmiersprachen hinzu. Nach absolvieren erster Projekte folgen weitere Projekte zum Beispiel in den Themenfeldern Algorithmusprogrammierung, C-Unix-Programmierung und Webprogrammierung.
+
+Nach dem ersten Ausbildungsjahr stehen verschiedene Schwerpunkte zur Auswahl. Wählbar sind unter anderem künstliche Intelligenz, funktionale Programmierung, Datensicherheit, Grafikprogrammierung sowie Netzwerk- und Systemverwaltung. An der Schule ist außerdem das Themenfeld Automobil-IT integriert.[5][10][11][12][13]
+Weblinks
+
+    Website der 42 Wolfsburg.
+
+Einzelnachweise
+Die Antwort auf den IT-Fachkräftemangel lautet 42. In: t3n.de. Abgerufen am 4. Februar 2023.
+Volkswagen unterstützt gemeinnützige Programmierschule „42Wolfsburg“. volkswagenag.com, 24. Juli 2020, archiviert vom Original (nicht mehr online verfügbar) am 18. April 2022; abgerufen am 29. November 2020.
+42 – 42 NETWORK. In: 42. 13. Juni 2019, abgerufen am 29. November 2020 (französisch).
+Innovative IT-Schmiede kommt nach Wolfsburg. In: wolfsburgplus.de. 28. August 2020, abgerufen am 29. November 2020.
+42 Wolfsburg: Hogwarts für Software Ingenieure. In: medium.com. 15. September 2020, abgerufen am 29. November 2020.
+Admission. In: 42wolfsburg.de. Abgerufen am 29. November 2020 (englisch).
+Volkswagen unterstützt gemeinnützige Programmierschule „42Wolfsburg“. In: volkswagenag.com. Archiviert vom Original (nicht mehr online verfügbar) am 18. April 2022; abgerufen am 24. Juli 2020.
+Die 42Wolfsburg zieht in die Markthalle. In: deinwolfsburg.de. Abgerufen am 25. Dezember 2020.
+How is the curriculum gamified? In: 42 Wolfsburg. Abgerufen am 25. Dezember 2020 (englisch).
+42Wolfsburg I Coding School – Home. In: 42 Wolfsburg. Abgerufen am 29. November 2020 (englisch).
+Curriculum. In: 42 Wolfsburg. Archiviert vom Original (nicht mehr online verfügbar) am 17. Januar 2021; abgerufen am 29. November 2020 (englisch).
+Specialization and Skills. In: 42 Wolfsburg. Archiviert vom Original (nicht mehr online verfügbar) am 17. Januar 2021; abgerufen am 29. November 2020 (englisch).
+
+    École 42 kommt nach Wolfsburg: Volkswagen fördert Programmierschule ohne Lehrer. In: www.automobilwoche.de. automobilwoche.de, abgerufen am 29. November 2020.
+
+Kategorien:
+
+    Schule in WolfsburgPrivatschule in NiedersachsenBildungseinrichtungsgründung 2020
+
+    Diese Seite wurde zuletzt am 8. März 2025 um 06:47 Uhr bearbeitet.
+    Abrufstatistik · Autoren
+
+    Der Text ist unter der Lizenz „Creative-Commons Namensnennung – Weitergabe unter gleichen Bedingungen“ verfügbar; Informationen zu den Urhebern und zum Lizenzstatus eingebundener Mediendateien (etwa Bilder oder Videos) können im Regelfall durch Anklicken dieser abgerufen werden. Möglicherweise unterliegen die Inhalte jeweils zusätzlichen Bedingungen. Durch die Nutzung dieser Website erklären Sie sich mit den Nutzungsbedingungen und der Datenschutzrichtlinie einverstanden.
+    Wikipedia® ist eine eingetragene Marke der Wikimedia Foundation Inc.
+
+    Datenschutz
+    Über Wikipedia
+    Impressum
+    Verhaltenskodex
+    Entwickler
+    Statistiken
+    Stellungnahme zu Cookies
+    Mobile Ansicht
+
+    Wikimedia Foundation
+    Powered by MediaWiki
+
+42 Wolfsburg
+Abschnitt hinzufügen
+
