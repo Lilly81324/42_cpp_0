@@ -1,0 +1,48 @@
+Decimal -> Binary as float
+
+1) Find Fractions and transform to binary
+8		- 2^3
++1		- 2^0
++0.5	- 2^-1
++0.25	- 2^-2
+-> 1001.11
+2) Float point to create exponent
+1001.11
+-> 1.00111 * 2^3
+3) Get signed bit
+-x
+-> 1
+4) Get exponent to correct form and then to binary
+2^3 -> 3
+3+127 = 130 = 2^7 + 2^1 = 7th bit and 1 bit
+-> 10000010
+5) Get mantissa by removing one
+1.00111 - 1
+00111
+-> 00111000000000000000000
+6) Add together
+-> 1 10000010 00111000000000000000000
+
+
+Binary as float -> Decimal
+
+1) Get sign (0 bit)
+1
+-> +
+2) Get exponent (1-8 bits)
+10000010 to decimal
+= 2^7 + 2^1 = 130
+remove bias
+130 - 127
+-> 3
+3) Get mantissa to factor then add 1 (9-31 bits)
+00111000000000000000000
+00111
+= 2^-3 + 2^-4 + 2^-5
+= 0.21875
+-> 1.21875
+4) Multiply as follows, then apply sign
+mantissa * 2 ^ exponent
+1.21875 * 2^3
+= 9.75
+-> -9.75
