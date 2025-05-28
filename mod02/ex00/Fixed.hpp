@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Name.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 13:52:25 by sikunne           #+#    #+#             */
-/*   Updated: 2025/05/27 13:59:40 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/05/28 14:59:36 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NAME_HPP
-# define NAME_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 # include <iostream>
 
-# define DEFAULTNAME ""
-
-class Name
+class Fixed
 {
 	private:
-		std::string _name;
+		int _value;
+		static const int _bitsize = 8;
 	public:
-		Name( void );
-		Name( std::string name );
-		Name( const Name& );
-		~Name( void );
-}
+		Fixed( void );
+		Fixed( const Fixed& );
+		~Fixed( void );
+		Fixed& operator=(const Fixed&);
+		int getRawBits( void ) const;
+		void setRawBits( int const );
+};
 
 #endif
