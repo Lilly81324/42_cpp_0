@@ -10,6 +10,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@
+	@echo "Compiled \"$(NAME)\""
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
