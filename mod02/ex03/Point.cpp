@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 12:31:37 by sikunne           #+#    #+#             */
-/*   Updated: 2025/05/29 16:22:02 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/05/30 15:37:41 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ const Fixed& Point::getY( void )const
 
 std::ostream &operator<<( std::ostream& out, const Point& point )
 {
-	out << point.getX() << " " << point.getY();
+	out << point.getX() << "|" << point.getY();
 	return (out);
 }

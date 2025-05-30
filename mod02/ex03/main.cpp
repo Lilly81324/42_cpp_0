@@ -25,15 +25,15 @@ void	printpoint(const Point& a, const Point& b, const Point& c, const Point& tar
 int main( void )
 {
 	Point a;
-	Point b(5, 0);
-	Point c(0, 5);
+	Point b(5.0f, 0.0f);
+	Point c(0.0f, 5.0f);
 
 	Point target0(a);
-	Point target1(1, 1);
-	Point target2(2, 2);
-	Point target3(3, 3);
-	Point target4(6, 6);
-	Point target5(0, 2);
+	Point target1(1.0f, 1.0f);
+	Point target2(2.0f, 2.0f);
+	Point target3(3.0f, 3.0f);
+	Point target4(6.0f, 6.0f);
+	Point target5(0.0f, 2.0f);
 
 	printpoint(a, b, c, target0);
 	printpoint(a, b, c, target1);
