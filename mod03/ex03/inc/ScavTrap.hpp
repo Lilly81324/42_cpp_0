@@ -6,16 +6,16 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:52:31 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:21:48 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/02 18:12:57 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-# include "ClapTrap.hpp"
+# include "../inc/ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap( void );

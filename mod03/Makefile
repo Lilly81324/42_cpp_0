@@ -3,7 +3,7 @@ NAME = ex0
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp
+SRC = ./src/main.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 all: $(NAME)

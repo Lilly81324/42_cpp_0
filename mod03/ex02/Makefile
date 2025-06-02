@@ -1,9 +1,9 @@
-NAME = ex00
+NAME = ex02
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = ./src/main.cpp ./src/ClapTrap.cpp
+SRC = ./src/main.cpp ./src/ClapTrap.cpp ./src/FragTrap.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 all: $(NAME)

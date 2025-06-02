@@ -6,11 +6,11 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 17:33:49 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:20:01 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/02 17:47:54 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "../inc/ClapTrap.hpp"
 
 ClapTrap::ClapTrap( void ): name(""), health(10), energy(10), dmg(0)
 {

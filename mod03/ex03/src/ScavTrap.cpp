@@ -6,11 +6,11 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 16:58:04 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:25:21 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/02 18:16:49 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "../inc/ScavTrap.hpp"
 
 ScavTrap::ScavTrap( void ): ClapTrap()
 {
@@ -31,7 +31,7 @@ ScavTrap::ScavTrap( std::string name ): ClapTrap(name)
 
 ScavTrap::ScavTrap( const ScavTrap& other ): ClapTrap(other)
 {
-	std::cout << "ClapTrap Copy Constructor called" << std::endl;
+	std::cout << "ScavTrap Copy Constructor called" << std::endl;
 	this->name = other.name;
 	this->health = other.health;
 	this->energy = other.energy;

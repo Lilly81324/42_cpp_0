@@ -5,37 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 17:09:49 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:32:55 by sikunne          ###   ########.fr       */
+/*   Created: 2025/05/30 18:01:05 by sikunne           #+#    #+#             */
+/*   Updated: 2025/06/02 17:49:11 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "../inc/ClapTrap.hpp"
 
 int main(void)
 {
-	ScavTrap clappy("Clappy");
-	ScavTrap happy("Happy");
-	ScavTrap scrappy("Scrappy");
-	std::cout << std::endl;
+	ClapTrap clappy("Clappy");
+	ClapTrap rusty("Rusty");
 
-	scrappy.guardGate();
-	scrappy.takeDamage(500);
-	scrappy.guardGate();
-	std::cout << std::endl;
-	
-	clappy.attack("Happy");
-	happy.takeDamage(20);
-	happy.attack("Clappy");
-	clappy.takeDamage(20);
-	clappy.attack("Happy");
-	happy.takeDamage(20);
-	happy.beRepaired(69);
-	std::cout << std::endl;
-
-	for (int i = 0; i < 49; i++)
-		clappy.beRepaired(1000);
-	clappy.attack("the wall");
-	std::cout << std::endl;
+	clappy.attack("Rusty");
+	rusty.takeDamage(9);
+	rusty.attack("Clappy");
+	clappy.takeDamage(2);
+	clappy.attack("Rusty");
+	rusty.takeDamage(9);
+	rusty.attack("Clappy");
+	rusty.beRepaired(69);
+	for (int i = 0; i < 11; i++)
+		clappy.beRepaired(2);
+	clappy.attack("Rustys carcass");
 	return (0);
 }
