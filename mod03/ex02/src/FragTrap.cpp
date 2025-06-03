@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:35:31 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:45:07 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/03 16:38:53 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ FragTrap::FragTrap( std::string name ): ClapTrap(name)
 
 FragTrap::FragTrap( const FragTrap& other ): ClapTrap(other)
 {
-	std::cout << "ClapTrap Copy Constructor called" << std::endl;
+	std::cout << "FragTrap Copy Constructor called" << std::endl;
 	this->name = other.name;
 	this->health = other.health;
 	this->energy = other.energy;
