@@ -6,36 +6,33 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:09:49 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:46:55 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/03 15:57:01 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/FragTrap.hpp"
+#include "../inc/DiamondTrap.hpp"
 
 int main(void)
 {
-	FragTrap clappy("Clappy");
-	FragTrap happy("Happy");
-	FragTrap scrappy("Scrappy");
+	DiamondTrap shiny("Shiny");
 	std::cout << std::endl;
 
-	scrappy.highFivesGuys();
-	scrappy.takeDamage(500);
-	scrappy.highFivesGuys();
+	shiny.takeDamage(99);
+	shiny.attack("Rusty");
+	shiny.whoAmI();
 	std::cout << std::endl;
 	
-	clappy.attack("Happy");
-	happy.takeDamage(20);
-	happy.attack("Clappy");
-	clappy.takeDamage(20);
-	clappy.attack("Happy");
-	happy.takeDamage(20);
-	happy.beRepaired(69);
+	for (int i = 0; i < 50; i++)
+	{
+		std::cout << "Attack-" << 2+i << "	";
+		shiny.attack("Rusty");
+	}
+	shiny.beRepaired(5);
 	std::cout << std::endl;
 
-	for (int i = 0; i < 99; i++)
-		clappy.beRepaired(1000);
-	clappy.attack("the ground");
+	shiny.takeDamage(1);
+	shiny.beRepaired(5);
 	std::cout << std::endl;
-	return (0);
+
+	return(0);
 }

@@ -12,25 +12,28 @@
 
 #include "../inc/DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap( void ):
-	this->name = FragTrap::name;
-	this->health = FragTrap::health;
-	this->energy = ScavTrap::energy;
-	this->dmg = FragTrap::dmg;
+DiamondTrap::DiamondTrap( void ): 
+ ClapTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
 {
+	this->name = "Unnamed";
+	this->health = this->FragTrap::health;
+	this->energy = this->ScavTrap::energy;
+	this->dmg = this->FragTrap::dmg;
 	std::cout << "DiamondTrap Default Constructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap( std::string name ): ClapTrap(name)
+DiamondTrap::DiamondTrap( std::string name ): 
+ ClapTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
 {
+	this->name = name;
+	this->health = this->FragTrap::health;
+	this->energy = this->ScavTrap::energy;
+	this->dmg = this->FragTrap::dmg;
 	std::cout << "DiamondTrap Normal Constructor called" << std::endl;
-	this->name = name + "_clap_name";
-	this->health = FragTrap::health;
-	this->energy = ScavTrap::energy;
-	this->dmg = FragTrap::dmg;
 }
 
-DiamondTrap::DiamondTrap( const DiamondTrap& other ): ClapTrap(other)
+DiamondTrap::DiamondTrap( const DiamondTrap& other ): 
+ ClapTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap Copy Constructor called" << std::endl;
 	this->name = other.name;
@@ -63,19 +66,7 @@ void DiamondTrap::whoAmI( void )
 	std::cout << ClapTrap::name << std::endl;
 }
 
-void DiamondTrap::attack( std::string target )
+void DiamondTrap::attack( const std::string& name )
 {
-	if (this->health <= 0)
-	{
-		std::cout << "DiamondTrap " << this->name << " is too ded to attack" << std::endl;
-		return ;
-	}
-	if (this->energy <= 0)
-	{
-		std::cout << "DiamondTrap " << this->name << " is too tired to attack" << std::endl;
-		return ;
-	}
-	std::cout << "DiamondTrap " << this->name << " attacks " << target;
-	std::cout << " dealing " << this->dmg << " damage" << std::endl;
-	this->energy--;
+	this->ScavTrap::attack(name);
 }

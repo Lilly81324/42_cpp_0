@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 17:50:21 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/02 17:58:11 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/03 15:47:29 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class DiamondTrap: public FragTrap, public ScavTrap
 		~DiamondTrap( void );
 		DiamondTrap& operator=( const DiamondTrap& );
 		void whoAmI( void );
-		void attack( std::string );
+		void attack( const std::string& );
 };
 
 #endif
