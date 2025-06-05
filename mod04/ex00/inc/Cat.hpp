@@ -1,8 +1,7 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include <iostream>
-# include "Animal.hpp"
+# include "../inc/Animal.hpp"
 
 class Cat: public Animal
 {
@@ -12,7 +11,7 @@ class Cat: public Animal
 		Cat( const Cat& other );
 		Cat&	operator=( const Cat& other );
 		~Cat( void );
-		void makeSound( void ) const override;
+		void makeSound( void ) const;
 };
 
 #endif

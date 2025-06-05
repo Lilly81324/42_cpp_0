@@ -1,8 +1,7 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include <iostream>
-# include "Animal.hpp"
+# include "../inc/Animal.hpp"
 
 class Dog: public Animal
 {
@@ -12,7 +11,7 @@ class Dog: public Animal
 		Dog( const Dog& other );
 		Dog&	operator=( const Dog& other );
 		~Dog( void );
-		void makeSound( void ) const override;
+		void makeSound( void ) const;
 };
 
 #endif

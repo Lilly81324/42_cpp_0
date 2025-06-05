@@ -119,7 +119,7 @@ void write_class( const std::string& classname)
 	out << classname << "::~" << classname << "( void )\n";
 	out << "{\n\tstd::cout << \"" << classname << " Deconstructor\" << std::endl;\n}\n\n";
 	out << classname << "& " << classname << "::operator=( const " << classname << "& other )\n";
-	out << "{\n\tstd::cout << \"" << classname << " Assignement Operator\" << std::endl;\n}\n";
+	out << "{\n\tstd::cout << \"" << classname << " Assignement Operator\" << std::endl;\n\treturn(*this);\n}\n";
 }
 
 int main(void)

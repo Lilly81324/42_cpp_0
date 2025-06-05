@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "../inc/Animal.hpp"
 
 Animal::Animal( void )
 {
@@ -39,6 +39,7 @@ const Animal& Animal::operator=( const Animal& other )
 {
 	std::cout << "Animal Asignement Operator" << std::endl;
 	this->type = other.type;
+	return (*this);
 }
 
 void Animal::makeSound( void ) const
