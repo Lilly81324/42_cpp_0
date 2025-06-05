@@ -1,9 +1,11 @@
 #include "../inc/Cat.hpp"
+#include "../inc/Brain.hpp"
 
 Cat::Cat( void ): Animal()
 {
 	std::cout << "Default Cat Constructor" << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain
 }
 
 Cat::Cat( const std::string& type ): Animal()
