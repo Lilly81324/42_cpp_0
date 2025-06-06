@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 15:40:09 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/06 16:41:56 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/06 17:03:20 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,10 @@ void Character::unequip(int idx)
 		return ;
 	}
 	this->inventory[idx] = NULL;
-	std::cout << this->name << " unequipped Materia from slot" << idx << "/3" << std::endl;
+	std::cout << this->name << " unequipped Materia from slot " << idx << "/3" << std::endl;
 }
 		
-void Character::use(int idx, Character& target)
+void Character::use(int idx, ICharacter& target)
 {
 	if (idx >= 4 || idx < 0)
 	{

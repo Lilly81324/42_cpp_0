@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 14:34:37 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/06 16:37:50 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/06 17:03:03 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include "Character.hpp"
 
-class Character;
+class ICharacter;
 
 class AMateria
 {
@@ -30,7 +30,7 @@ class AMateria
 		AMateria&	operator=( const AMateria& other );
 		std::string const & getType() const;
 		virtual AMateria* clone() const = 0;
-		virtual void use(Character& target); // should be IChracter
+		virtual void use(ICharacter& target);
 };
 
 #endif

@@ -17,13 +17,15 @@
 int main()
 {
 	AMateria * mat = new Ice;
-	Character chas("Chas");
-	Character steve("Steve");
+	ICharacter* chad = new Character("Chad");
+	ICharacter* steve = new Character("Steve");
 
-	chas.equip(mat);
-	chas.use(0, steve);
-	chas.unequip(0);
+	chad->equip(mat);
+	chad->use(0, *steve);
+	chad->unequip(0);
 	delete mat;
+	delete chad;
+	delete steve;
 	return (0);
 }
 

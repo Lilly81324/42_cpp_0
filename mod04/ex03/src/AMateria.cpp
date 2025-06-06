@@ -42,7 +42,7 @@ std::string const & AMateria::getType( void ) const
 	return (this->type);
 }
 
-void AMateria::use(Character& target) // should be ICharacter
+void AMateria::use(ICharacter& target)
 {
 	if (this->type == "ice")
 		std::cout << "* shoots an ice bolt at ";
