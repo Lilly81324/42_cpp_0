@@ -3,10 +3,10 @@
 
 //If no Default, can we call "Materia mat()" ?
 
-// AMateria::AMateria( void )
-// {
-// 	std::cout << "Default AMateria Constructor" << std::endl;
-// }
+AMateria::AMateria( void )
+{
+	std::cout << "Default AMateria Constructor" << std::endl;
+}
 
 AMateria::AMateria( std::string const & type )
 {
@@ -33,7 +33,7 @@ AMateria::~AMateria( void )
 AMateria& AMateria::operator=( const AMateria& other )
 {
 	std::cout << "AMateria Assignement Operator" << std::endl;
-	this->type = other.getType();
+	this->type = other.getType(); // subject says "copying the type doesn’t make sense"
 	return(*this);
 }
 
@@ -42,11 +42,14 @@ std::string const & AMateria::getType( void ) const
 	return (this->type);
 }
 
-// AMateria* AMateria::clone() const
-// {};
-
-// void AMateria::use(ICharacter& target)
-// {
-// 	//TODO
-// 	// Use the Materia of this type
-// }
+void AMateria::use(Character& target) // should be ICharacter
+{
+	if (this->type == "ice")
+		std::cout << "* shoots an ice bolt at ";
+	else
+		std::cout << "* heals ";
+	std::cout << target.getName();
+	if (this->type == "cure")
+		std::cout << "'s wounds";
+	std::cout << " *" << std::endl;
+}
