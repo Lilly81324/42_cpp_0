@@ -1,14 +1,14 @@
 #include "../inc/Cat.hpp"
 #include "../inc/Brain.hpp"
 
-Cat::Cat( void ): Animal()
+Cat::Cat( void ): AAnimal()
 {
 	std::cout << "Default Cat Constructor" << std::endl;
 	this->type = "Cat";
 	this->brain = new Brain();
 }
 
-Cat::Cat( const std::string& type ): Animal()
+Cat::Cat( const std::string& type ): AAnimal()
 {
 	std::cout << "Parameterized Cat Constructor" << std::endl;
 	this->type = "Cat";
@@ -16,7 +16,7 @@ Cat::Cat( const std::string& type ): Animal()
 	(void)type;
 }
 
-Cat::Cat( const Cat& other ): Animal()
+Cat::Cat( const Cat& other ): AAnimal()
 {
 	std::cout << "Copy Cat Constructor" << std::endl;
 	this->type = other.type;
@@ -39,4 +39,9 @@ Cat& Cat::operator=( const Cat& other )
 void Cat::makeSound( void ) const
 {
 	std::cout << "*meeooow*" << std::endl;
+}
+
+const std::string& Cat::getType( void ) const
+{
+	return (this->type);
 }

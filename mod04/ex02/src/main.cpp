@@ -20,8 +20,8 @@ int main()
 	std::cout << "||---Direct Animal Creation---||\n";
 	// Directly creating Animals
 	{
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
+		const AAnimal* j = new Dog();
+		const AAnimal* i = new Cat();
 		j->makeSound();
 		i->makeSound();
 		delete j;
@@ -29,15 +29,15 @@ int main()
 	}
 	std::cout << "||---Direct Animal Array Creation---||\n";
 	// Directly creating Animal Array with objects
-	{
-		Animal zoo[ZOOSIZE];
-		for (int i = 0; i < ZOOSIZE; i++)
-			zoo[i].makeSound();
-	}
+	// {
+	// 	AAnimal zoo[ZOOSIZE];
+	// 	for (int i = 0; i < ZOOSIZE; i++)
+	// 		zoo[i].makeSound();
+	// }
 	std::cout << "||---Indirect Animal Array Creation---||\n";
 	// Indirectly creating Animal Array, then assigning them later
 	{
-		Animal *zoo[ZOOSIZE];
+		AAnimal *zoo[ZOOSIZE];
 		for (int i = 0; i < (ZOOSIZE / 2); i++)
 			zoo[i] = new Dog();
 		for (int i = (ZOOSIZE / 2); i < ZOOSIZE; i++)

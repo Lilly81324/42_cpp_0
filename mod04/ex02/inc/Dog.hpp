@@ -2,9 +2,9 @@
 # define DOG_HPP
 
 # include "../inc/Brain.hpp"
-# include "../inc/Animal.hpp"
+# include "../inc/AAnimal.hpp"
 
-class Dog: public Animal
+class Dog: public AAnimal
 {
 	private:
 		Brain *brain;
@@ -15,6 +15,7 @@ class Dog: public Animal
 		Dog&	operator=( const Dog& other );
 		~Dog( void );
 		void makeSound( void ) const;
+		const std::string& getType( void ) const;
 };
 
 #endif

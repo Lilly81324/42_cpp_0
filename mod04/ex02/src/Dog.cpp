@@ -1,7 +1,7 @@
 #include "../inc/Dog.hpp"
 #include "../inc/Brain.hpp"
 
-Dog::Dog( void ): Animal( )
+Dog::Dog( void ): AAnimal( )
 {
 	std::cout << "Default Dog Constructor" << std::endl;
 	this->type = "Dog";
@@ -9,7 +9,7 @@ Dog::Dog( void ): Animal( )
 
 }
 
-Dog::Dog( const std::string& type ): Animal( )
+Dog::Dog( const std::string& type ): AAnimal( )
 {
 	std::cout << "Parameterized Dog Constructor" << std::endl;
 	this->type = "Dog";
@@ -17,7 +17,7 @@ Dog::Dog( const std::string& type ): Animal( )
 	(void)type;
 }
 
-Dog::Dog( const Dog& other ): Animal( )
+Dog::Dog( const Dog& other ): AAnimal( )
 {
 	std::cout << "Copy Dog Constructor" << std::endl;
 	this->type = other.type;
@@ -40,4 +40,9 @@ Dog& Dog::operator=( const Dog& other )
 void Dog::makeSound( void ) const
 {
 	std::cout << "*woof* *bark*" << std::endl;
+}
+
+const std::string& Dog::getType( void ) const
+{
+	return (this->type);
 }

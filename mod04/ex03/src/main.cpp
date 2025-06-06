@@ -10,41 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Dog.hpp"
-#include "../inc/Cat.hpp"
+#include "../inc/Ice.hpp"
+#include "../inc/Cure.hpp"
 
 #define ZOOSIZE 5
 
 int main()
 {
-	std::cout << "||---Direct Animal Creation---||\n";
-	// Directly creating Animals
 	{
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
-		j->makeSound();
-		i->makeSound();
-		delete j;
-		delete i;
+		Ice mat;
+		AMateria *newclone;
+
+		std::cout << mat.getType() << std::endl;
+		newclone = mat.clone();
+		std::cout << newclone->getType() << std::endl;
+		delete newclone;
 	}
-	std::cout << "||---Direct Animal Array Creation---||\n";
-	// Directly creating Animal Array with objects
 	{
-		Animal zoo[ZOOSIZE];
-		for (int i = 0; i < ZOOSIZE; i++)
-			zoo[i].makeSound();
+		Cure mat;
+		AMateria *newclone;
+
+		std::cout << mat.getType() << std::endl;
+		newclone = mat.clone();
+		std::cout << newclone->getType() << std::endl;
+		delete newclone;
 	}
-	std::cout << "||---Indirect Animal Array Creation---||\n";
-	// Indirectly creating Animal Array, then assigning them later
-	{
-		Animal *zoo[ZOOSIZE];
-		for (int i = 0; i < (ZOOSIZE / 2); i++)
-			zoo[i] = new Dog();
-		for (int i = (ZOOSIZE / 2); i < ZOOSIZE; i++)
-			zoo[i] = new Cat();
-		for (int i = 0; i < ZOOSIZE; i++)
-			zoo[i]->makeSound();
-		for (int i = 0; i < ZOOSIZE; i++)
-			delete zoo[i];
-	}
+	return (0);
 }
+
+// Make a Character class
+// A ICharacter has an invectory, which holds up to 4 materia
+// A AMateria class exists, and is the base for Ice Materia class and Cure Materia class
