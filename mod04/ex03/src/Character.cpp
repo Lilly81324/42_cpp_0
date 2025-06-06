@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 15:40:09 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/06 17:03:20 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/06 17:18:02 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ Character::Character( const Character& other )
 
 Character::~Character( void )
 {
+	for (int i = 0; i < 4; i++)
+		if (this->inventory[i] != NULL)
+			delete this->inventory[i];
 	std::cout << "Character Deconstructor" << std::endl;
 }
 
@@ -50,6 +53,14 @@ Character& Character::operator=( const Character& other )
 {
 	std::cout << "Character Assignement Operator" << std::endl;
 	this->name = other.name;
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->inventory[i] != NULL)
+		{
+			delete this->inventory[i];
+			this->inventory[i] = NULL;
+		}
+	}
 	for (int i = 0; i < 4; i++)
 	{
 		if (other.inventory[i] == NULL)
