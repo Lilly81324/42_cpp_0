@@ -1,9 +1,10 @@
-NAME = ex02
+NAME = ex03
 
 CXX = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = ./src/main.cpp ./src/Ice.cpp ./src/AMateria.cpp ./src/Cure.cpp ./src/Character.cpp ./src/MateriaSource.cpp
+SRC =	./src/main.cpp ./src/Ice.cpp ./src/AMateria.cpp ./src/Cure.cpp \
+		./src/Character.cpp ./src/MateriaSource.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 all: $(NAME)

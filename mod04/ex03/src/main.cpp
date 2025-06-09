@@ -15,51 +15,51 @@
 #include "../inc/Character.hpp"
 #include "../inc/MateriaSource.hpp"
 
+
+// Materia in Players and in Source is deleted properly on end of programm
+// 
+
 int main()
 {
-	{
-	AMateria * mat = new Cure;
-	MateriaSource library;
-	library.learnMateria(new Ice);
-	library.learnMateria(new Cure);
+	AMateria * ice = new Ice;
+	AMateria * cure = new Cure;
+	if (DEBUG) std::cout << std::endl;
 
-	ICharacter* chad = new Character("Chad");
-	ICharacter* steve = new Character("Steve");
+	ICharacter * cid = new Character("Cid Garlond");
+	ICharacter * nero = new Character("Nero tol Scaeva");
+	if (DEBUG) std::cout << std::endl;
 
-	chad->equip(mat);
-	chad->equip(library.createMateria("ice"));
-	chad->equip(library.createMateria("cure"));
-	chad->equip(library.createMateria("cure"));
+	IMateriaSource* library = new MateriaSource;
+	if (DEBUG) std::cout << std::endl;
+
+	library->learnMateria(new Ice);
+	library->learnMateria(new Cure);
+	if (DEBUG) std::cout << std::endl;
+
+	nero->equip(ice);
+	nero->equip(library->createMateria("ice"));
+	cid->equip(cure);
+	cid->equip(library->createMateria("cure"));
+	if (DEBUG) std::cout << std::endl;
+
+	nero->use(0, *cid);
+	cid->use(1, *cid);
+	if (DEBUG) std::cout << "==Edge Cases==" << std::endl;
+
+	nero->use(-1, *cid);
+	nero->use(5, *cid);
+	nero->use(3, *cid);
+	nero->unequip(-2);
+	nero->unequip(3);
+	nero->unequip(5);
+	if (DEBUG) std::cout << std::endl;
+
+	library->learnMateria(NULL);
+	delete library->createMateria("Nonsense"); 
+	if (DEBUG) std::cout << std::endl;
 	
-	chad->use(0, *steve);
-	chad->unequip(0);
-	delete mat;
-	delete chad;
-	delete steve;
-	}
-	std::cout << std::endl;
-	{
-		IMateriaSource* src = new MateriaSource();
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
-		ICharacter* me = new Character("me");
-		AMateria* tmp;
-		tmp = src->createMateria("ice");
-		me->equip(tmp);
-		tmp = src->createMateria("cure");
-		me->equip(tmp);
-		ICharacter* bob = new Character("bob");
-		me->use(0, *bob);
-		me->use(1, *bob);
-		delete bob;
-		delete me;
-		delete src;
-	}
+	delete library;
+	delete cid;
+	delete nero;
 	return (0);
 }
-
-// If Original Materia new -> delete
-// If Materia cloned -> delete
-// ! Stack Materia, Copied Materia
-
-// If Materia is unequipped, what do you do with it?

@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:45:05 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/09 17:42:08 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/09 18:22:29 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,12 @@ void MateriaSource::learnMateria(AMateria* type)
 {
 	int pos = 0;
 
+	if (type == NULL)
+	{
+		if (DEBUG) std::cout << "Cannot learn empty Materia" << std::endl;
+		return ;
+	}
+	if (DEBUG) std::cout << "Learning new Materia: " << type->getType() << std::endl;
 	while (pos < 4 && this->templates[pos] != NULL)
 		pos++;
 	if (pos >= 4)
@@ -95,9 +101,10 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 {
 	int	i = 0;
 	AMateria* target = NULL;
+	if (DEBUG) std::cout << "Creating new Materia: " << type << std::endl;
 	while (i < 4)
 	{
-		if (this->templates[i]->getType() == type)
+		if (this->templates[i] != NULL && this->templates[i]->getType() == type)
 		{
 			target = this->templates[i]->clone();
 			break;
@@ -105,6 +112,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		i++;
 	}
 	if (i == 4 && target == NULL)
-		if (DEBUG) std::cout << "No such Materia " << type << " template exists";
+		if (DEBUG) std::cout << "No template for " << type << "-materia exists";
 	return (target);
 }
