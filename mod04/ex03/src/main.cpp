@@ -17,27 +17,44 @@
 
 int main()
 {
-	AMateria * icemat = new Ice;
-	AMateria * curemat = new Cure;
-	AMateria * loosemat = new Cure;
+	{
+	AMateria * mat = new Cure;
 	MateriaSource library;
-	library.learnMateria(icemat);
-	library.learnMateria(curemat);
-	delete icemat;
-	delete curemat;
+	library.learnMateria(new Ice);
+	library.learnMateria(new Cure);
+
 	ICharacter* chad = new Character("Chad");
 	ICharacter* steve = new Character("Steve");
 
-	chad->equip(loosemat);
+	chad->equip(mat);
 	chad->equip(library.createMateria("ice"));
 	chad->equip(library.createMateria("cure"));
 	chad->equip(library.createMateria("cure"));
 	
 	chad->use(0, *steve);
 	chad->unequip(0);
-	delete loosemat;
+	delete mat;
 	delete chad;
 	delete steve;
+	}
+	std::cout << std::endl;
+	{
+		IMateriaSource* src = new MateriaSource();
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
+		ICharacter* me = new Character("me");
+		AMateria* tmp;
+		tmp = src->createMateria("ice");
+		me->equip(tmp);
+		tmp = src->createMateria("cure");
+		me->equip(tmp);
+		ICharacter* bob = new Character("bob");
+		me->use(0, *bob);
+		me->use(1, *bob);
+		delete bob;
+		delete me;
+		delete src;
+	}
 	return (0);
 }
 

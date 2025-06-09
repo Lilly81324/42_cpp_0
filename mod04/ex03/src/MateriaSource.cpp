@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:45:05 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/09 17:13:57 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/09 17:42:08 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 MateriaSource::MateriaSource( void )
 {
-	std::cout << "Default MateriaSource Constructor" << std::endl;
+	if (DEBUG) std::cout << "Default MateriaSource Constructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->templates[i] = NULL;
 }
 
 MateriaSource::MateriaSource( const std::string& name )
 {
-	std::cout << "Parameterized MateriaSource Constructor" << std::endl;
+	if (DEBUG) std::cout << "Parameterized MateriaSource Constructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 		this->templates[i] = NULL;
 	if (name == "ice")
@@ -34,7 +34,7 @@ MateriaSource::MateriaSource( const std::string& name )
 
 MateriaSource::MateriaSource( const MateriaSource& other )
 {
-	std::cout << "Copy MateriaSource Constructor" << std::endl;
+	if (DEBUG) std::cout << "Copy MateriaSource Constructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (other.templates[i] == NULL)
@@ -50,7 +50,7 @@ MateriaSource::MateriaSource( const MateriaSource& other )
 
 MateriaSource&	MateriaSource::operator=( const MateriaSource& other )
 {
-	std::cout << "MateriaSource Assignement Operator" << std::endl;
+	if (DEBUG) std::cout << "MateriaSource Assignement Operator" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (other.templates[i] == NULL)
@@ -67,7 +67,7 @@ MateriaSource&	MateriaSource::operator=( const MateriaSource& other )
 
 MateriaSource::~MateriaSource()
 {
-	std::cout << "MateriaSource Deconstructor" << std::endl;
+	if (DEBUG) std::cout << "MateriaSource Deconstructor" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->templates[i] != NULL)
@@ -84,9 +84,11 @@ void MateriaSource::learnMateria(AMateria* type)
 	while (pos < 4 && this->templates[pos] != NULL)
 		pos++;
 	if (pos >= 4)
-		std::cout << "Couldn't learn this Materia, the Source is full" << std::endl;
+	{
+		if (DEBUG) std::cout << "Couldn't learn this Materia, the Source is full" << std::endl;
+	}
 	else
-		this->templates[pos] = type->clone();
+		this->templates[pos] = type;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
@@ -103,6 +105,6 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 		i++;
 	}
 	if (i == 4 && target == NULL)
-		std::cout << "No such Materia " << type << " template exists";
+		if (DEBUG) std::cout << "No such Materia " << type << " template exists";
 	return (target);
 }

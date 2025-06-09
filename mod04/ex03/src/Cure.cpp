@@ -2,24 +2,29 @@
 
 Cure::Cure( void ): AMateria( "cure" )
 {
-	std::cout << "Default Cure Constructor" << std::endl;
+	if (DEBUG) std::cout << "Default Cure Constructor" << std::endl;
+}
 
+Cure::Cure( const std::string& name ): AMateria( "ice" )
+{
+	if (DEBUG) std::cout << "Default Cure Constructor" << std::endl;
+	(void)name;
 }
 
 Cure::Cure( const Cure& other ): AMateria( "cure" )
 {
-	std::cout << "Copy Cure Constructor" << std::endl;
+	if (DEBUG) std::cout << "Copy Cure Constructor" << std::endl;
 	(void)other;
 }
 
 Cure::~Cure( void )
 {
-	std::cout << "Cure Deconstructor" << std::endl;
+	if (DEBUG) std::cout << "Cure Deconstructor" << std::endl;
 }
 
 Cure& Cure::operator=( const Cure& other )
 {
-	std::cout << "Cure Assignement Operator" << std::endl;
+	if (DEBUG) std::cout << "Cure Assignement Operator" << std::endl;
 	this->type = other.type;
 	return (*this);
 }
@@ -27,5 +32,6 @@ Cure& Cure::operator=( const Cure& other )
 AMateria* Cure::clone() const
 {
 	AMateria *cloned = new Cure;
+	if (DEBUG) std::cout << "Cure Clone created" << std::endl;
 	return(cloned);
 }

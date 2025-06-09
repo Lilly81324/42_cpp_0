@@ -2,29 +2,29 @@
 
 Ice::Ice( void ): AMateria( "ice" )
 {
-	std::cout << "Default Ice Constructor" << std::endl;
-
+	if (DEBUG) std::cout << "Default Ice Constructor" << std::endl;
 }
 
-// Ice::Ice( Your_Parameters_here )
-// {
-// 	std::cout << "Parameterized Ice Constructor" << std::endl;
-// }
+Ice::Ice( const std::string& name ): AMateria( "ice" )
+{
+	if (DEBUG) std::cout << "Default Ice Constructor" << std::endl;
+	(void)name;
+}
 
 Ice::Ice( const Ice& other ): AMateria( "ice" )
 {
-	std::cout << "Copy Ice Constructor" << std::endl;
+	if (DEBUG) std::cout << "Copy Ice Constructor" << std::endl;
 	(void)other;
 }
 
 Ice::~Ice( void )
 {
-	std::cout << "Ice Deconstructor" << std::endl;
+	if (DEBUG) std::cout << "Ice Deconstructor" << std::endl;
 }
 
 Ice& Ice::operator=( const Ice& other )
 {
-	std::cout << "Ice Assignement Operator" << std::endl;
+	if (DEBUG) std::cout << "Ice Assignement Operator" << std::endl;
 	this->type = other.type;
 	return (*this);
 }
@@ -32,5 +32,6 @@ Ice& Ice::operator=( const Ice& other )
 AMateria* Ice::clone() const
 {
 	AMateria *cloned = new Ice;
+	if (DEBUG) std::cout << "Ice Clone created" << std::endl;
 	return(cloned);
 }

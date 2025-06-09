@@ -6,18 +6,17 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:45:05 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/09 15:19:44 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/09 17:46:31 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IMATERIASOURCE_HPP
-# define IMATERIASOURCE_HPP
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
 # include "AMateria.hpp"
+# include "IMateriaSource.hpp"
 
-class AMateria;
-
-class MateriaSource
+class MateriaSource: public IMateriaSource
 {
 	private:
 		AMateria* templates[4];

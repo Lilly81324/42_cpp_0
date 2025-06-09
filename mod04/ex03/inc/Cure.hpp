@@ -7,7 +7,7 @@ class Cure: public AMateria
 {
 	public:
 		Cure( void );
-		// Cure( std::string name );
+		Cure( const std::string& name );
 		Cure( const Cure& other );
 		Cure&	operator=( const Cure& other );
 		virtual ~Cure( void );

@@ -6,7 +6,7 @@
 /*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 14:45:05 by sikunne           #+#    #+#             */
-/*   Updated: 2025/06/09 14:54:44 by sikunne          ###   ########.fr       */
+/*   Updated: 2025/06/09 17:46:37 by sikunne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define IMATERIASOURCE_HPP
 
 # include "AMateria.hpp"
-
-class AMateria{};
 
 class IMateriaSource
 {
