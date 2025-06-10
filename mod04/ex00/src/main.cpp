@@ -29,6 +29,7 @@ int main()
 		delete j;
 		delete i;
 	}
+	std::cout << std::endl;
 	{
 		const Animal* cat = new Cat();
 		const WrongAnimal* wrongcat = new WrongCat();
