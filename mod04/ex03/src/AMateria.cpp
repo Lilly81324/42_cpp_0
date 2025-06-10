@@ -1,7 +1,16 @@
-#include "../inc/AMateria.hpp"
-// #include "../inc/ICharacter.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sikunne <sikunne@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/10 14:22:36 by sikunne           #+#    #+#             */
+/*   Updated: 2025/06/10 14:37:46 by sikunne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//If no Default, can we call "Materia mat()" ?
+#include "../inc/AMateria.hpp"
 
 AMateria::AMateria( void )
 {
@@ -32,8 +41,8 @@ AMateria::~AMateria( void )
 
 AMateria& AMateria::operator=( const AMateria& other )
 {
-	if (DEBUG) std::cout << "AMateria Assignement Operator" << std::endl;
-	this->type = other.getType(); // subject says "copying the type doesn’t make sense"
+	if (DEBUG) std::cout << "AMateria Assignement Operator called, DONT USE THIS" << std::endl;
+	this->type = other.getType();
 	return(*this);
 }
 

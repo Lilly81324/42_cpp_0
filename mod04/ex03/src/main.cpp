@@ -17,7 +17,7 @@
 
 
 // Materia in Players and in Source is deleted properly on end of programm
-// 
+// Dont leave your Materia just on the floor!
 
 int main()
 {
