@@ -43,7 +43,10 @@ int main()
 		for (int i = (ZOOSIZE / 2); i < ZOOSIZE; i++)
 			zoo[i] = new Cat();
 		for (int i = 0; i < ZOOSIZE; i++)
+		{
+			std::cout << zoo[i]->getType() << " makes: ";
 			zoo[i]->makeSound();
+		}
 		for (int i = 0; i < ZOOSIZE; i++)
 			delete zoo[i];
 	}
